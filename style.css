@@ -112,7 +112,6 @@ body {
     overflow: hidden;
     background-color: rgba(0, 0, 0, 0.85);
     backdrop-filter: blur(5px);
-    display: flex; /* Changed from 'none' to 'flex' for visibility */
     justify-content: center;
     align-items: center;
 }
