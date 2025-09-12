@@ -10,13 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.style.overflow = 'hidden'; // Prevent scrolling
 
             // Paste your actual content locker script from Adblumedia here.
-            // Example:
-            // const adblumediaScript = document.createElement('script');
-            // adblumediaScript.src = "https://adblumedia.com/locker_script.js?aid=YOUR_AFFILIATE_ID";
-            // lockerContainer.appendChild(adblumediaScript);
-
-            // Remember that the actual code must be taken from your account
-            // You should paste it here instead of this comment.
+            // Remember that the actual code must be taken from your account.
         });
     });
 
