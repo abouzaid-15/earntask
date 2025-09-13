@@ -27,13 +27,13 @@ document.addEventListener('DOMContentLoaded', () => {
         const configScript = document.createElement('script');
         configScript.type = 'text/javascript';
         // استبدل السطر التالي بالسطر الذي يحتوي على المتغيرات الخاصة بك
-        configScript.innerHTML = 'var kaxSR_ndi_gprAXc={"it":xxxxx,"key":"yyyyyy"};';
+        configScript.innerHTML = 'var TwGvh_PXt_miHVec={"it":4501921,"key":"89906"};';
         
         // ## الجزء الثاني: ملف الجافا سكربت الرئيسي ##
         // أنشئ وسم السكريبت الخاص بالملف الرئيسي
         const mainScript = document.createElement('script');
         // استبدل الرابط التالي بالرابط الرئيسي الخاص بك
-        mainScript.src = 'https://dfmpe7igsesdsd.cloudfront.net/zzzzzzzzz.js';
+        mainScript.src = 'https://d3qr4eoze2yrp4.cloudfront.net/121cc9d.js';
         
         // ## الجزء الثالث: دالة تشغيل اللوكر ##
         // هذا الكود يتأكد أن السكريبت الرئيسي قد تم تحميله قبل تشغيل اللوكر
