@@ -1,54 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get Your Free Gift Card</title>
+    <title>Premium Gift Card Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="header">
-        <div class="logo">
-            <img src="https://i.ibb.co/6P0S8rR/logo.png" alt="Premium Cards Logo">
-            <h1>Premium Cards</h1>
-        </div>
-        <p class="slogan">Unlock your favorite gift cards for free!</p>
-    </header>
+    <div class="background-animation"></div>
 
-    <main class="main-content">
-        <h2 class="section-title">Select Your Gift Card</h2>
-        <div class="cards-container">
-            <div class="card" data-card="amazon">
-                <img src="https://i.ibb.co/fQzQ9xR/amazon.png" alt="Amazon Card">
-                <p>Amazon Card</p>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <i class="fa-solid fa-star"></i>
+                <span>Premium Cards</span>
             </div>
-            <div class="card" data-card="googleplay">
-                <img src="https://i.ibb.co/R2W7JkK/google-play.png" alt="Google Play Card">
-                <p>Google Play Card</p>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for a card...">
+                <i class="fa-solid fa-search"></i>
             </div>
-            <div class="card" data-card="roblox">
-                <img src="https://i.ibb.co/h7W9Y5V/roblox.png" alt="Roblox Card">
-                <p>Roblox Card</p>
-            </div>
-            <div class="card" data-card="apple">
-                <img src="https://i.ibb.co/3s8Q0gY/apple.png" alt="Apple Card">
-                <p>Apple Card</p>
-            </div>
-            <div class="card" data-card="pubg">
-                <img src="https://i.ibb.co/X8D8z6N/pubg.png" alt="PUBG Card">
-                <p>PUBG Card</p>
-            </div>
-        </div>
-    </main>
+        </header>
 
-    <div id="content-locker-modal" class="modal">
-        <div class="modal-content">
-            <p>Please complete one offer to unlock your gift card.</p>
-            <div id="locker-container">
+        <main>
+            <section class="hero">
+                <h1>The Ultimate Gifting Experience</h1>
+                <p>Get your favorite gift cards instantly and securely</p>
+            </section>
+
+            <section class="cards-grid">
+                <div class="card" data-card="roblox">
+                    <img src="https://www.freepnglogos.com/uploads/roblox-logo-png/roblox-logo-white-roblox-logo-29.png" alt="Roblox" style="max-height: 35px;">
                 </div>
+                <div class="card" data-card="amazon">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon">
+                </div>
+                <div class="card" data-card="steam">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/83/Steam_icon_logo.svg" alt="Steam">
+                </div>
+                <div class="card" data-card="playstation">
+                    <img src="https://logolook.net/wp-content/uploads/2021/11/PlayStation-Logo-2009.png" alt="PlayStation">
+                </div>
+                <div class="card" data-card="xbox">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/Xbox_one_logo.svg" alt="Xbox">
+                </div>
+                <div class="card" data-card="apple">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple">
+                </div>
+            </section>
+
+            <section class="trust-badges">
+                <div class="badge">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <span>Secure Payment</span>
+                </div>
+                <div class="badge">
+                    <i class="fa-solid fa-bolt"></i>
+                    <span>Instant Delivery</span>
+                </div>
+                <div class="badge">
+                    <i class="fa-solid fa-gem"></i>
+                    <span>Official Retailer</span>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <div id="modal-locker" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div id="modal-body">
+                <h2 id="modal-title">Special Offer</h2>
+                <p>To continue, please complete the following offer.</p>
+                <div class="content-locker-placeholder">
+                   [ ضع كود جافا سكربت الخاص بـ AdBlue Media هنا ]
+                </div>
+            </div>
         </div>
     </div>
+    
+    <footer>
+        <p>Copyright &copy; 2025 Ahmed M. Sawan All Rights Reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
