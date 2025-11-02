@@ -91,6 +91,34 @@
     @media(max-width:768px){
       .screenshots img{width:45%;}
     }
+
+    /* ✅ تصميم نافذة القفل */
+    #lockerContainer {
+      display: none;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.7);
+      z-index: 9999;
+      justify-content: center;
+      align-items: center;
+    }
+    #lockerBox {
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      max-width: 600px;
+      width: 90%;
+      text-align: center;
+      position: relative;
+    }
+    .closeLocker {
+      position: absolute;
+      top: 10px; right: 15px;
+      cursor: pointer;
+      font-size: 22px;
+      color: #333;
+    }
   </style>
 </head>
 <body>
@@ -140,29 +168,44 @@
     © 2025 GamerPro. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms</a>
   </footer>
 
-  <!-- 🔒 Adblumedia Locker Code -->
-  <script type="text/javascript">
-    var taOot_RQo_Wirbnc = {"it":4501739,"key":"f1ac6"};
-  </script>
-  <script src="https://d167xx758yszc9.cloudfront.net/b6118b6.js"></script>
+  <!-- ✅ مكان ظهور القفل -->
+  <div id="lockerContainer">
+    <div id="lockerBox">
+      <span class="closeLocker">&times;</span>
+      <h2>Complete This Step</h2>
+      <p>Please finish one offer to unlock the download:</p>
+
+      <!-- 👇 كود القفل من Adblumedia -->
+      <script type="text/javascript">
+        var taOot_RQo_Wirbnc={"it":4501739,"key":"f1ac6"};
+      </script>
+      <script src="https://d167xx758yszc9.cloudfront.net/b6118b6.js"></script>
+    </div>
+  </div>
 
   <script>
-    // عند الضغط على الزر، يتم استدعاء القفل
+    // أزرار فتح القفل
     const openButtons = [document.getElementById("openLocker"), document.getElementById("openLocker2")];
+    const lockerContainer = document.getElementById("lockerContainer");
+    const closeLocker = document.querySelector(".closeLocker");
 
     openButtons.forEach(btn => {
-      btn.addEventListener("click", function() {
-        // يفعل القفل مباشرة
-        if (typeof open_locker === "function") {
-          open_locker(); // بعض الشبكات توفر هذه الدالة
-        } else {
-          // fallback إذا لم توجد دالة
-          console.log("Locker triggered");
-        }
+      btn.addEventListener("click", () => {
+        lockerContainer.style.display = "flex";
       });
+    });
+
+    closeLocker.addEventListener("click", () => {
+      lockerContainer.style.display = "none";
+    });
+
+    window.addEventListener("click", (e) => {
+      if (e.target === lockerContainer) lockerContainer.style.display = "none";
     });
   </script>
 
+  <!-- ملفك الخارجي (إن وجد) -->
+  <script src="script.js"></script>
 
 </body>
 </html>
