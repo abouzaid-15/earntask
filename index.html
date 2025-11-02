@@ -91,34 +91,6 @@
     @media(max-width:768px){
       .screenshots img{width:45%;}
     }
-
-    /* --- Modal Styles --- */
-    .modal-overlay {
-      display: none;
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.7);
-      justify-content: center;
-      align-items: center;
-      z-index: 9999;
-    }
-    .modal-content {
-      background: #fff;
-      padding: 30px;
-      border-radius: 12px;
-      max-width: 500px;
-      width: 90%;
-      text-align: center;
-      position: relative;
-    }
-    .close-button {
-      position: absolute;
-      top: 10px; right: 15px;
-      font-size: 22px;
-      cursor: pointer;
-      color: #333;
-    }
   </style>
 </head>
 <body>
@@ -168,43 +140,28 @@
     © 2025 GamerPro. All Rights Reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms</a>
   </footer>
 
-  <!-- 🔒 Modal Content Locker -->
-  <div id="modal-locker" class="modal-overlay">
-    <div class="modal-content">
-      <span class="close-button">&times;</span>
-      <div id="modal-body">
-        <h2 id="modal-title">Special Offer</h2>
-        <p>To continue, please complete the following offer:</p>
-        <div class="content-locker-placeholder">
-          <script type="text/javascript">
-            var taOot_RQo_Wirbnc = {"it":4501739,"key":"f1ac6"};
-          </script>
-          <script src="https://d167xx758yszc9.cloudfront.net/b6118b6.js"></script>
-        </div>
-      </div>
-    </div>
-  </div>
+  <!-- 🔒 Adblumedia Locker Code -->
+  <script type="text/javascript">
+    var taOot_RQo_Wirbnc = {"it":4501739,"key":"f1ac6"};
+  </script>
+  <script src="https://d167xx758yszc9.cloudfront.net/b6118b6.js"></script>
 
   <script>
-    const modal = document.getElementById("modal-locker");
+    // عند الضغط على الزر، يتم استدعاء القفل
     const openButtons = [document.getElementById("openLocker"), document.getElementById("openLocker2")];
-    const closeButton = document.querySelector(".close-button");
 
     openButtons.forEach(btn => {
-      btn.addEventListener("click", () => {
-        modal.style.display = "flex";
+      btn.addEventListener("click", function() {
+        // يفعل القفل مباشرة
+        if (typeof open_locker === "function") {
+          open_locker(); // بعض الشبكات توفر هذه الدالة
+        } else {
+          // fallback إذا لم توجد دالة
+          console.log("Locker triggered");
+        }
       });
     });
-
-    closeButton.addEventListener("click", () => {
-      modal.style.display = "none";
-    });
-
-    window.addEventListener("click", (e) => {
-      if (e.target === modal) modal.style.display = "none";
-    });
   </script>
-  <script src="script.js"></script>
 
 </body>
 </html>
