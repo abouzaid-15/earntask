@@ -175,12 +175,12 @@
       <h2>Verification Required</h2>
       <p>Please complete one offer to unlock your download.</p>
 
-      <!-- 👇 كود القفل الجديد من Adblumedia -->
+      <!-- كود القفل من Adblumedia -->
       <script type="text/javascript">
         var IVuKV_Kvj_UWczqc={"it":4501921,"key":"89906"};
       </script>
       <script src="https://d1y0yks1k8t5m5.cloudfront.net/5c05f2a.js"></script>
-      <script>_JW();</script>
+      <!-- ⚠️ لاحظ: لا نضع _JW() هنا بعد الآن -->
     </div>
   </div>
 
@@ -193,6 +193,10 @@
     openButtons.forEach(btn => {
       btn.addEventListener("click", () => {
         lockerContainer.style.display = "flex";
+        // ✅ هنا فقط نشغل القفل بعد الضغط
+        if (typeof _JW === "function") {
+          _JW();
+        }
       });
     });
 
